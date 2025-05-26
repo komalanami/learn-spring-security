@@ -16,3 +16,12 @@ A default user is created, and a generated password is displayed in the console 
    - The session is invalidated when the user logs out or the session expires.
 6. User can log out by clicking a logout link(/logout), which invalidates the session and redirects to the login page.
 
+
+### Exploring Basic Authentication
+1. Most Basic options to secure a REST API.
+  - BUT Has many flaws
+  - Credentials are sent in the HTTP header with every request.
+  - Credentials are Base64 encoded, not encrypted.
+  - Not suitable for production use.
+2. Base 64 encoded credentials are sent in the HTTP header with every request.
+  - Authorization: Basic <base64 encoded credentials>
